@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patrick M. Houston — Healthcare Marketing Portfolio</title>
+<meta name="description" content="Healthcare marketing across hospital systems, physician networks, and clinical service lines. Selected case studies from UC Irvine Health, Tenet Health, and Lakewood Regional.">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FWQHRK8GL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6FWQHRK8GL');
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FFFFFF;
+    --bg-alt: #F2F5F9;
+    --ink: #1A1D23;
+    --ink-soft: #3B3F47;
+    --muted: #5C6370;
+    --rule: #D4DBE4;
+    --accent: #0064A4;
+    --accent-deep: #003F6B;
+    --deep: #002E5D;
+    --gold: #FFC72C;
+    --gold-soft: #FFE38A;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  img { max-width: 100%; display: block; }
+
+  /* Layout primitives */
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .wrap-narrow { max-width: 780px; margin: 0 auto; padding: 0 32px; }
+
+  /* Navigation */
+  nav.top {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--rule);
+    z-index: 100;
+    padding: 18px 32px;
+  }
+  nav.top .inner {
+    max-width: 1180px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  nav.top .name {
+    font-family: 'Merriweather', Georgia, serif;
+    font-weight: 600;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  nav.top ul {
+    list-style: none; display: flex; gap: 28px;
+    font-size: 14px; font-weight: 500;
+  }
+  nav.top a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  nav.top a:hover { color: var(--accent); }
+
+  /* Hero */
+  .hero {
+    padding: 120px 0 96px;
+    position: relative;
+  }
+  .hero .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(44px, 7vw, 92px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    color: var(--deep);
+    margin-bottom: 28px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-family: 'Merriweather', Georgia, serif;
+    color: var(--accent);
+  }
+  .hero .lede {
+    font-size: 22px;
+    line-height: 1.5;
+    max-width: 680px;
+    color: var(--ink-soft);
+    font-weight: 400;
+  }
+  .hero .meta {
+    display: flex; flex-wrap: wrap; gap: 28px;
+    margin-top: 44px;
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+  .hero .meta span { display: inline-flex; align-items: center; gap: 8px; }
+  .hero .meta a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--rule); transition: border-color 0.2s, color 0.2s; }
+  .hero .meta a:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* Stats strip */
+  .stats {
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 56px 0;
+    margin-top: 36px;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+  .stat .num {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 56px;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    color: var(--deep);
+    line-height: 1;
+  }
+  .stat .num sup {
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--accent);
+    vertical-align: super;
+  }
+  .stat .lbl {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 14px;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+  }
+
+  /* About */
+  .about { padding: 96px 0; }
+  .about .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  .about h2 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--deep);
+    margin-bottom: 28px;
+  }
+  .about p {
+    font-size: 19px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+  }
+
+  /* Case studies */
+  .case {
+    padding: 120px 0 80px;
+    border-top: 1px solid var(--rule);
+  }
+  .case .case-num {
+    font-family: 'Merriweather', Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+  }
+  .case h2 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(32px, 4.5vw, 52px);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    color: var(--deep);
+    margin-bottom: 24px;
+    max-width: 880px;
+  }
+  .case .tagline {
+    font-size: 20px;
+    color: var(--ink-soft);
+    max-width: 780px;
+    margin-bottom: 48px;
+    line-height: 1.5;
+  }
+  .case-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    padding: 28px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 64px;
+  }
+  .case-meta dt {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .case-meta dd {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: var(--ink);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  /* Case body layout */
+  .case-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 64px;
+  }
+  .section-h {
+    font-family: 'Merriweather', Georgia, serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  .case-block p {
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+  }
+  .case-block p + p { margin-top: 0; }
+  .case-block ul { list-style: none; margin: 20px 0; padding: 0; }
+  .case-block ul li {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    padding-left: 22px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .case-block ul li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 11px;
+    width: 10px; height: 1px;
+    background: var(--accent);
+  }
+
+  /* Hero image for each case */
+  .case-hero-img {
+    margin: 64px 0;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 16px 60px -20px rgba(26, 29, 35, 0.25), 0 2px 8px -2px rgba(26, 29, 35, 0.1);
+  }
+  .case-hero-img img { width: 100%; height: auto; }
+  .case-hero-img .caption {
+    background: var(--ink);
+    color: var(--bg);
+    padding: 18px 24px;
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Merriweather', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+  }
+
+  /* Creative gallery - grid of campaign pieces */
+  .gallery {
+    display: grid;
+    gap: 24px;
+    margin: 32px 0;
+  }
+  .gallery.cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .gallery.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .gallery.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .gallery figure {
+    background: var(--bg-alt);
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px -12px rgba(26, 29, 35, 0.25);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+  .gallery figure:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px -12px rgba(26, 29, 35, 0.3);
+  }
+  .gallery img { width: 100%; height: auto; }
+  .gallery figcaption {
+    padding: 14px 16px;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+    font-style: italic;
+    font-family: 'Merriweather', Georgia, serif;
+    line-height: 1.4;
+  }
+
+  /* Results callouts */
+  .results {
+    background: var(--ink);
+    color: var(--bg);
+    padding: 64px 56px;
+    border-radius: 2px;
+    margin: 64px 0;
+  }
+  .results .section-h { color: var(--bg); opacity: 0.6; }
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    margin-top: 28px;
+  }
+  .result-item .big {
+    font-family: 'Merriweather', Georgia, serif;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--bg);
+  }
+  .result-item .big .unit {
+    font-size: 36px;
+    color: var(--accent);
+    font-weight: 400;
+    margin-left: 4px;
+  }
+  .result-item .desc {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--bg);
+    opacity: 0.75;
+    margin-top: 16px;
+  }
+  .results > p.note {
+    font-size: 14px;
+    color: var(--bg);
+    opacity: 0.6;
+    font-style: italic;
+    font-family: 'Merriweather', Georgia, serif;
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  /* Funnel SVG container */
+  .funnel-wrap {
+    background: var(--bg-alt);
+    padding: 56px 48px;
+    border-radius: 2px;
+    margin: 32px 0;
+    text-align: center;
+  }
+  .funnel-wrap svg { max-width: 640px; width: 100%; height: auto; display: block; margin: 0 auto; }
+  .funnel-wrap .funnel-caption {
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+    font-family: 'Merriweather', Georgia, serif;
+    margin-top: 24px;
+  }
+
+  /* Split layout for images beside text */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+    margin: 32px 0;
+  }
+  .two-col .img-stack { display: grid; gap: 16px; }
+
+  /* Channel chips */
+  .chips {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin: 20px 0 10px;
+  }
+  .chip {
+    font-size: 13px;
+    padding: 6px 14px;
+    background: var(--bg-alt);
+    border: 1px solid var(--rule);
+    border-radius: 100px;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+
+  /* Contact footer */
+  footer {
+    background: var(--deep);
+    color: var(--bg);
+    padding: 96px 0 56px;
+    margin-top: 120px;
+  }
+  footer .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  footer h3 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--bg);
+    margin-bottom: 48px;
+    max-width: 860px;
+  }
+  footer h3 em {
+    font-style: italic; color: var(--accent);
+  }
+  footer .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px;
+    padding: 48px 0;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+  footer .contact-grid dt {
+    font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--accent);
+    font-weight: 600; margin-bottom: 12px;
+  }
+  footer .contact-grid dd {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 20px; color: var(--bg);
+  }
+  footer .contact-grid a {
+    color: var(--bg); text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    transition: border-color 0.2s;
+  }
+  footer .contact-grid a:hover { border-bottom-color: var(--accent); }
+  footer .fine {
+    font-size: 13px; color: var(--bg); opacity: 0.5;
+    margin-top: 48px;
+    font-style: italic;
+    font-family: 'Merriweather', Georgia, serif;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .stats-grid, .case-meta, .results-grid, footer .contact-grid { grid-template-columns: 1fr 1fr; }
+    .gallery.cols-4 { grid-template-columns: 1fr 1fr; }
+    .gallery.cols-3 { grid-template-columns: 1fr 1fr; }
+    .two-col { grid-template-columns: 1fr; }
+    .hero { padding: 80px 0 56px; }
+    .case { padding: 80px 0 56px; }
+    .results { padding: 40px 28px; }
+    nav.top ul { gap: 18px; font-size: 13px; }
+    nav.top ul li:nth-child(3) { display: none; } /* hide middle link on mobile */
+    .result-item .big { font-size: 52px; }
+    .result-item .big .unit { font-size: 28px; }
+  }
+  @media (max-width: 600px) {
+    .stats-grid, .case-meta, .results-grid, footer .contact-grid, .gallery.cols-4, .gallery.cols-3 { grid-template-columns: 1fr; }
+    .wrap, .wrap-narrow { padding: 0 22px; }
+    nav.top { padding: 14px 22px; }
+    .hero .meta { gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="inner">
+    <div class="name">Patrick&nbsp;M.&nbsp;Houston</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#case-01">UCI Health</a></li>
+      <li><a href="#case-02">Medicare</a></li>
+      <li><a href="#case-03">Dinner w/ a Doctor</a></li>
+      <li><a href="#case-04">Joint Replacement</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Selected Work · Healthcare Marketing</p>
+    <h1>Service line growth and <em>institutional storytelling</em> across Southern California hospital systems.</h1>
+    <p class="lede">Eighteen years leading marketing at UC Irvine Health, Tenet Health Pacific Coast, and Lakewood Regional Medical Center. Service line growth, brand transitions, physician engagement, and integrated multi-channel campaigns.</p>
+    <div class="meta">
+      <span>Anaheim, CA</span>
+      <span>·</span>
+      <span><a href="mailto:phoustonnow@gmail.com">phoustonnow@gmail.com</a></span>
+      <span>·</span>
+      <span><a href="tel:+19493550193">(949) 355-0193</a></span>
+      <span>·</span>
+      <span><a href="https://linkedin.com/in/patrickmhouston" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="num">25<sup>%</sup></div>
+        <div class="lbl">Lift in NRC&nbsp;Health brand awareness<br>for UC Irvine Health Lakewood</div>
+      </div>
+      <div class="stat">
+        <div class="num">53<sup>%</sup></div>
+        <div class="lbl">YoY increase in ER leads,<br>714 conversions in a single year</div>
+      </div>
+      <div class="stat">
+        <div class="num">$150<sup>K+</sup></div>
+        <div class="lbl">In attributed revenue from<br>tracked service-line event program</div>
+      </div>
+      <div class="stat">
+        <div class="num">18<sup>yrs</sup></div>
+        <div class="lbl">Hospital system and<br>physician-network marketing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap-narrow">
+    <p class="eyebrow">About</p>
+    <h2>A healthcare marketer who thinks in funnels, campaigns, and filled rooms.</h2>
+    <p>I lead integrated marketing for hospital systems across brand, service line, digital, print, events, and physician engagement. My work sits at the intersection of measurable campaign performance and the kind of institutional storytelling that earns trust with physicians, administrators, and the patients they serve.</p>
+    <p>Today I serve as an Account Strategist at UCI Health, leading integrated marketing for Neurosciences, Primary Care and Open Enrollment, and Transplant across the UC Irvine academic health system. I partner with the Neurology chair and clinical leadership on growth strategy, business case development, and brand health measurement. Previously I led the Community Network awareness campaign for UCI Health's four newly-acquired community hospitals at the Lakewood campus. Before UCI, I spent eight years running service line and community marketing at Tenet Health Pacific Coast, and nearly a decade before that as Business Development Manager building physician referral networks at Lakewood Regional Medical Center. Four selected case studies below.</p>
+  </div>
+</section>
+
+<!-- CASE 01 -->
+<section class="case" id="case-01">
+  <div class="wrap">
+    <p class="case-num">Case 01 · Recent</p>
+    <h2>UC Irvine Health Community Network — Brand Transition &amp; Awareness Campaign</h2>
+    <p class="tagline">Leading the rebrand and market-facing awareness program for four community hospitals newly acquired by UC Irvine Health — resulting in a 25% lift in brand awareness and Top 3 consumer target ranking.</p>
+
+    <dl class="case-meta">
+      <div><dt>Role</dt><dd>Led strategy &amp; execution</dd></div>
+      <div><dt>Scope</dt><dd>4 hospitals, 2 counties</dd></div>
+      <div><dt>Channels</dt><dd>Print, digital, social, in-facility</dd></div>
+      <div><dt>Measurement</dt><dd>NRC Health quarterly tracking</dd></div>
+    </dl>
+
+    <div class="case-hero-img">
+      <img src="images/uci_will_see_hero.jpg" alt="UCI Health Will See You Now framed poster installed in clinical environment featuring four-hospital Community Network">
+      <div class="caption">"UCI Health will see you now" — hero creative installed in facility. Naming all four Community Network hospitals: Fountain Valley, Lakewood, Los Alamitos, and Placentia Linda.</div>
+    </div>
+
+    <div class="case-body">
+      <div class="case-block">
+        <p class="section-h">The Challenge</p>
+        <p>UC Irvine Health acquired four community hospitals from Tenet Healthcare: Fountain Valley, Lakewood, Los Alamitos, and Placentia Linda. Each facility needed to be rebranded under UC Irvine Health's architecture, and the newly-unified Community Network had to be introduced to Orange County consumers, existing patients at those facilities, and the hyperlocal populations surrounding each hospital — three distinct audiences, all at once.</p>
+      </div>
+
+      <div class="case-block">
+        <p class="section-h">The Approach</p>
+        <p>I led a two-phase campaign architecture: first, a pure brand-awareness push to seed the new name in-market; second, an audience-segmented awareness campaign with creative tailored to how each audience would encounter UC Irvine Health differently.</p>
+        <ul>
+          <li><strong>General Orange County consumers</strong> — aspirational lifestyle imagery with the headline <em>"The best care. Right in your community."</em></li>
+          <li><strong>Existing UC Irvine Health patients</strong> — warmer, more relational creative with <em>"High-quality care. Here at home."</em></li>
+          <li><strong>Hyperlocal audiences</strong> near each of the four facilities — active-lifestyle imagery and community-anchored copy with <em>"High-quality care. Close to home."</em></li>
+        </ul>
+      </div>
+
+      <p class="section-h">Audience-Segmented Creative</p>
+      <div class="gallery cols-4">
+        <figure>
+          <img src="images/uci_creative_oc1.jpg" alt="UCI Health print creative — general OC audience, woman hiker">
+          <figcaption>General OC · Creative 1</figcaption>
+        </figure>
+        <figure>
+          <img src="images/uci_creative_oc2.jpg" alt="UCI Health print creative — general OC audience, woman cyclist">
+          <figcaption>General OC · Creative 2</figcaption>
+        </figure>
+        <figure>
+          <img src="images/uci_creative_patient.jpg" alt="UCI Health print creative — patient audience, man portrait">
+          <figcaption>UCI patients</figcaption>
+        </figure>
+        <figure>
+          <img src="images/uci_creative_hyperlocal.jpg" alt="UCI Health hyperlocal creative — woman playing pickleball">
+          <figcaption>Hyperlocal · Placentia Linda</figcaption>
+        </figure>
+      </div>
+
+      <p class="section-h">Digital Execution</p>
+      <div class="case-block">
+        <p>Digital display and paid social carried the brand story across the same OC/LA market. Campaign reach was tracked alongside the print mix, with hyperlocal audience segmentation mirroring the four-hospital footprint.</p>
+      </div>
+      <div class="gallery cols-3">
+        <figure>
+          <img src="images/uci_digital_1.jpg" alt="UCI Health Community Network digital campaign performance — placeholder">
+          <figcaption>Digital campaign execution &amp; reach</figcaption>
+        </figure>
+        <figure>
+          <img src="images/uci_digital_2.jpg" alt="UCI Health Community Network digital channel breakdown — placeholder">
+          <figcaption>Channel mix &amp; deployment</figcaption>
+        </figure>
+        <figure>
+          <img src="images/uci_digital_3.jpg" alt="UCI Health Community Network digital engagement — placeholder">
+          <figcaption>Engagement &amp; audience performance</figcaption>
+        </figure>
+      </div>
+
+      <div class="case-block">
+        <p class="section-h">Print Execution</p>
+        <p>Fourteen print publications across the OC/LA market mix. Included the Orange County Register, Long Beach Press Telegram, LA Times/OC, and the Grunion Gazette for regional reach, plus hyperlocal-focused community publications including Leisure World Weekly, Rossmore Living, Yorba Linda Neighbors, and Lakewood Community News.</p>
+        <div class="chips">
+          <span class="chip">Orange County Register</span>
+          <span class="chip">Long Beach Press Telegram</span>
+          <span class="chip">LA Times/OC</span>
+          <span class="chip">Grunion Gazette</span>
+          <span class="chip">Leisure World Weekly</span>
+          <span class="chip">Rossmore Living</span>
+          <span class="chip">Yorba Linda Neighbors</span>
+          <span class="chip">Lakewood Community News</span>
+          <span class="chip">Fountain Valley Living</span>
+          <span class="chip">+5 more</span>
+        </div>
+      </div>
+
+      <p class="section-h">In-Facility Activation</p>
+      <div class="gallery cols-3">
+        <figure>
+          <img src="images/uci_welcomes.jpg" alt="UCI Health welcomes you — framed poster installed in clinical environment for internal staff audience">
+          <figcaption>Staff-facing welcome — installed in clinical environments to reinforce the integration story with employees.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/uci_banner.jpg" alt="UCI Health Will See You Now retractable pull-up banner for events and lobby deployment">
+          <figcaption>Retractable banner — freestanding pull-up for events, lobbies, and community activations.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/uci_teaser.jpg" alt="UCI Health typographic teaser poster — Will See You Now on brand blue background">
+          <figcaption>Typographic teaser — low-cost, rapid-deployment piece used to seed the tagline ahead of the full creative rollout.</figcaption>
+        </figure>
+      </div>
+
+      <div class="results">
+        <p class="section-h">Results</p>
+        <div class="results-grid">
+          <div class="result-item">
+            <div class="big">25<span class="unit">%</span></div>
+            <div class="desc">Lift in NRC Health brand awareness tracking across Community Network markets.</div>
+          </div>
+          <div class="result-item">
+            <div class="big">Top 3</div>
+            <div class="desc">Moved into the Top 3 consumer target tier in the Lakewood market region.</div>
+          </div>
+          <div class="result-item">
+            <div class="big">#2</div>
+            <div class="desc">Trending toward No. 2 market ranking for FY25 at time of measurement.</div>
+          </div>
+        </div>
+        <p class="note">Quarterly NRC Health brand tracking — awareness, recall, image, and preference — supplemented by on-demand consumer insights surveys. Measured across the full Community Network footprint.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE 02 -->
+<section class="case" id="case-02">
+  <div class="wrap">
+    <p class="case-num">Case 02</p>
+    <h2>Medicare Advantage — Multi-Hospital Regional Acquisition Campaign</h2>
+    <p class="tagline">A coordinated twelve-event community seminar program across four OC/LA hospitals during Medicare Open Enrollment, supported by integrated multi-channel marketing and a full attribution funnel.</p>
+
+    <dl class="case-meta">
+      <div><dt>Role</dt><dd>Regional marketing lead</dd></div>
+      <div><dt>Scope</dt><dd>4 hospitals, 12 events</dd></div>
+      <div><dt>Channels</dt><dd>Direct mail, print, email, social, phone</dd></div>
+      <div><dt>Window</dt><dd>Oct 15 – Dec 6, AEP</dd></div>
+    </dl>
+
+    <div class="case-hero-img">
+      <img src="images/medicare_poster.jpg" alt="Medicare workshop 24x36 poster for Lakewood Regional — community education program">
+      <div class="caption">Lakewood Regional Medicare workshop 24×36 print execution — community-facing creative driving registration to the in-facility seminar series.</div>
+    </div>
+
+    <div class="case-body">
+      <div class="case-block">
+        <p class="section-h">The Challenge</p>
+        <p>Medicare Annual Enrollment Period (October 15 – December 7) is the most competitive window of the year for hospital systems with Medicare Advantage partnerships. Every major local system — Memorial Care, St. Joseph, and others — runs its own education programming. We needed to convert AEP activity into new aligned-plan enrollments across four Tenet facilities in two counties.</p>
+      </div>
+
+      <div class="case-block">
+        <p class="section-h">The Approach</p>
+        <p>I designed and coordinated a unified twelve-event community seminar program across four hospitals — Fountain Valley, Lakewood Regional, Placentia-Linda, and Los Alamitos — supported by an integrated multi-channel campaign. Each event featured a certified independent insurance broker for trust and no-pressure enrollment guidance, with co-located appointment scheduling.</p>
+        <div class="chips">
+          <span class="chip">Direct Mail</span>
+          <span class="chip">E-Newsletter</span>
+          <span class="chip">Email</span>
+          <span class="chip">Print (OC Register, Grunion Gazette, Golden Rain News, FV Living)</span>
+          <span class="chip">Boosted Social</span>
+          <span class="chip">In-Facility Digital Screens</span>
+          <span class="chip">Outbound Phone</span>
+          <span class="chip">Senior Centers · Chambers · Libraries</span>
+        </div>
+      </div>
+
+      <p class="section-h">The Funnel</p>
+      <div class="funnel-wrap">
+        <svg viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="funnel1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0064A4"/>
+              <stop offset="100%" stop-color="#003F6B"/>
+            </linearGradient>
+            <linearGradient id="funnel2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#002E5D"/>
+              <stop offset="100%" stop-color="#001B36"/>
+            </linearGradient>
+          </defs>
+          <!-- Top layer: marketing responders -->
+          <polygon points="40,30 600,30 540,90 100,90" fill="url(#funnel1)" opacity="0.92"/>
+          <text x="320" y="65" text-anchor="middle" fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="18" font-weight="600">337 Marketing Responders</text>
+          <!-- Layer 2 -->
+          <polygon points="100,100 540,100 490,160 150,160" fill="url(#funnel1)" opacity="0.78"/>
+          <text x="320" y="135" text-anchor="middle" fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="16" font-weight="600">221 Seminar Attendees</text>
+          <!-- Layer 3 -->
+          <polygon points="150,170 490,170 435,230 205,230" fill="url(#funnel1)" opacity="0.63"/>
+          <text x="320" y="205" text-anchor="middle" fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="15" font-weight="600">71 Appointment Requests</text>
+          <!-- Layer 4 -->
+          <polygon points="205,240 435,240 385,300 255,300" fill="url(#funnel2)" opacity="0.85"/>
+          <text x="320" y="275" text-anchor="middle" fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="14" font-weight="600">19 Appointments Set</text>
+          <!-- Layer 5 -->
+          <polygon points="255,310 385,310 360,370 280,370" fill="url(#funnel2)"/>
+          <text x="320" y="345" text-anchor="middle" fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="14" font-weight="700">7 Enrollments</text>
+          <!-- Annotation -->
+          <text x="320" y="400" text-anchor="middle" fill="#5C6370" font-family="Merriweather, Georgia, serif" font-style="italic" font-size="13">Reported at 11 of 12 events completed. Final event pending at time of deck.</text>
+        </svg>
+        <p class="funnel-caption">32% of event attendees requested an appointment with the enrollment broker on site — a conversion rate well above industry norms for community health education.</p>
+      </div>
+
+      <div class="results">
+        <p class="section-h">Results</p>
+        <div class="results-grid">
+          <div class="result-item">
+            <div class="big">4</div>
+            <div class="desc">Hospitals coordinated in a single unified Medicare Advantage campaign across Orange County and greater Los Angeles.</div>
+          </div>
+          <div class="result-item">
+            <div class="big">221</div>
+            <div class="desc">Seminar attendees across eleven completed events — consistent audience engagement across four market regions.</div>
+          </div>
+          <div class="result-item">
+            <div class="big">32<span class="unit">%</span></div>
+            <div class="desc">Attendee-to-appointment conversion rate, with projected multi-million-dollar lifetime patient value against six-figure campaign investment.</div>
+          </div>
+        </div>
+        <p class="note">Full funnel tracked attendee through appointment through enrollment. Reported to regional hospital leadership with quarterly executive summary.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE 03 -->
+<section class="case" id="case-03">
+  <div class="wrap">
+    <p class="case-num">Case 03 · Multi-Year Program</p>
+    <h2>Dinner with a Doctor — Service Line Event Program</h2>
+    <p class="tagline">A sustained community health education program at Lakewood Regional pairing free dinner seminars with specialist physicians — building community trust, physician visibility, and measurable patient acquisition across multiple service lines.</p>
+
+    <dl class="case-meta">
+      <div><dt>Role</dt><dd>Program lead · Marketing</dd></div>
+      <div><dt>Scope</dt><dd>15–20+ events over multi-year span</dd></div>
+      <div><dt>Service Lines</dt><dd>Urology, Cardiology, Orthopedics, GI, more</dd></div>
+      <div><dt>Format</dt><dd>Free seminar + dinner + specialist Q&amp;A</dd></div>
+    </dl>
+
+    <div class="case-hero-img">
+      <img src="images/dwd_packed_room.jpg" alt="Packed Dinner with a Doctor event — Dr. Jonathan Perley presenting on prostate cancer to a full community audience at Lakewood Regional">
+      <div class="caption">Dr. Jonathan Perley presenting prostate cancer education to a standing-room community audience. Dinner with a Doctor averaged 50 attendees per session across the program, with standout events pulling well beyond that.</div>
+    </div>
+
+    <div class="case-body">
+      <div class="case-block">
+        <p class="section-h">The Challenge</p>
+        <p>Community hospitals compete for patient trust and service line referrals against larger academic systems in the same market. A brochure cannot build relationships; a packed room with a specialist who answers questions well can. Dinner with a Doctor was our answer to that problem — a sustained program designed to put specialists in front of community members, build trust, and track the work through to actual clinical outcomes.</p>
+      </div>
+
+      <div class="case-block">
+        <p class="section-h">The Approach</p>
+        <p>I built the program as a recurring series — consistent format, consistent branding, rotating specialists and topics keyed to service line growth priorities. Free admission, dinner served, moderated by the physician, followed by community Q&amp;A. Paired each event with an integrated marketing push: print posters deployed to waiting rooms and senior centers, direct mail into high-value ZIP codes, email invitations, and digital promotion.</p>
+        <ul>
+          <li>Urology — Men's Health Seminar Series with Dr. Jonathan Perley (Low T, BPH, Bladder Control)</li>
+          <li>Orthopedics — Joint and Surgical Interventions with Dr. Prem Ramkumar</li>
+          <li>Cardiology — Heart Disease, Atrial Fibrillation, Peripheral Artery Disease</li>
+          <li>Additional service lines across GI, bariatric surgery, and women's health</li>
+        </ul>
+      </div>
+
+      <p class="section-h">Campaign Creative</p>
+      <div class="gallery cols-2">
+        <figure>
+          <img src="images/mens_health_poster.jpg" alt="Men's Health Seminar Series 22x28 poster for Lakewood Regional featuring Dr. Jonathan Perley">
+          <figcaption>Men's Health Seminar Series · 22×28 poster · Deployed across community and clinic venues</figcaption>
+        </figure>
+        <figure>
+          <img src="images/dwd_brochure.jpg" alt="Dinner with a Doctor Lecture Series brochure — orthopedic and cardiology events">
+          <figcaption>Dinner with a Doctor Lecture Series · Orthopedics + Cardiology</figcaption>
+        </figure>
+      </div>
+
+      <div class="results">
+        <p class="section-h">Results</p>
+        <div class="results-grid">
+          <div class="result-item">
+            <div class="big">~50</div>
+            <div class="desc">Average attendance per session across the program; multiple events drew 90+ community members.</div>
+          </div>
+          <div class="result-item">
+            <div class="big">$150<span class="unit">K+</span></div>
+            <div class="desc">Marketing-attributed revenue across the tracked Dinner with a Doctor / Dinner with a Surgeon event cohort.</div>
+          </div>
+          <div class="result-item">
+            <div class="big">439</div>
+            <div class="desc">Attendees at the flagship Dinner with a Surgeon joint-pain event alone — $141K in attributed revenue from that single session.</div>
+          </div>
+        </div>
+        <p class="note">Maintained attribution tracking from event attendance through clinical consult and booked procedure — closing the loop that most community health education programs never close.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE 04 -->
+<section class="case" id="case-04">
+  <div class="wrap">
+    <p class="case-num">Case 04 · Multi-Channel Service Line</p>
+    <h2>Joint Replacement Marketing Campaign — Orthopedic Service Line Growth</h2>
+    <p class="tagline">A cross-channel consumer acquisition campaign for orthopedic surgery across four hospitals, executed in co-marketing partnership with Stryker — pairing sophisticated digital targeting with direct mail, community, and out-of-home to drive physician referrals and surgical patient encounters.</p>
+
+    <dl class="case-meta">
+      <div><dt>Role</dt><dd>Led strategy &amp; execution</dd></div>
+      <div><dt>Scope</dt><dd>4 hospitals, 6 months</dd></div>
+      <div><dt>Partner</dt><dd>Co-marketing with Stryker</dd></div>
+      <div><dt>Service Line</dt><dd>Orthopedic / Musculoskeletal</dd></div>
+    </dl>
+
+    <div class="case-hero-img">
+      <img src="images/joint_brief.jpg" alt="Joint Replacement Marketing Campaign brief — channel strategy, creative, and execution summary">
+      <div class="caption">Campaign brief — channel architecture, audience strategy, and creative executions across Direct Mail, Paid Search, Geo-fencing, Community Newspapers, Billboards, Video, and Facebook. Co-branded with Stryker.</div>
+    </div>
+
+    <div class="case-body">
+      <div class="case-block">
+        <p class="section-h">The Challenge</p>
+        <p>As patients returned to elective orthopedic procedures post-COVID, competition for joint replacement candidates across Southern California intensified. The window to capture consumers researching joint pain and surgical options was narrow, and each hospital in the four-facility network had its own market dynamics. We needed a unified, data-driven acquisition program that could target high-intent consumers at scale while filling four orthopedic service lines simultaneously.</p>
+      </div>
+
+      <div class="case-block">
+        <p class="section-h">The Approach</p>
+        <p>I designed and led a multi-channel consumer acquisition campaign in co-marketing partnership with Stryker, combining sophisticated hyperlocal targeting with traditional awareness media. The strategy paired high-intent digital channels (paid search, geo-fencing, social) with precision direct mail and community-rooted placements to reach consumers who were actively considering joint replacement — or showing the lifestyle signals of those who soon would be.</p>
+        <ul>
+          <li><strong>Paid Search</strong> — Google campaigns targeting consumers searching for orthopedic treatments and joint pain relief</li>
+          <li><strong>Geo-Fencing Mobile Ads</strong> — Five-mile perimeter targeting around Cypress, CA, with demographic and lifestyle-matched audiences</li>
+          <li><strong>Direct Mail</strong> — 32,779 postcards to primary service areas, plus 3,780 targeted to self-reported joint pain sufferers</li>
+          <li><strong>Community Newspapers</strong> — Weekly placements in Golden Rain News, monthly in Lakewood Community News</li>
+          <li><strong>Out-of-Home</strong> — Leisure World shuttle bus billboards to reach a high-relevance 55+ demographic</li>
+          <li><strong>Facebook, Video, and Web</strong> — Supporting awareness across brand-safe social and video inventory</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">Paid Search</span>
+          <span class="chip">Geo-Fencing</span>
+          <span class="chip">Direct Mail</span>
+          <span class="chip">Community Newspapers</span>
+          <span class="chip">OOH / Billboards</span>
+          <span class="chip">Facebook</span>
+          <span class="chip">Video</span>
+          <span class="chip">Web</span>
+        </div>
+      </div>
+
+      <p class="section-h">Campaign Funnel &amp; Results</p>
+      <div class="funnel-wrap">
+        <svg viewBox="0 0 720 440" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="jointGrad1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0064A4"/>
+              <stop offset="100%" stop-color="#003F6B"/>
+            </linearGradient>
+            <linearGradient id="jointGrad2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#002E5D"/>
+              <stop offset="100%" stop-color="#001B36"/>
+            </linearGradient>
+          </defs>
+          <!-- Campaign reach -->
+          <rect x="40" y="30" width="640" height="60" fill="url(#jointGrad1)" opacity="0.92"/>
+          <text x="360" y="58" text-anchor="middle" fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="16" font-weight="600">36,559 Hyperlocal Households Reached</text>
+          <text x="360" y="78" text-anchor="middle" fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="12" opacity="0.85">Direct Mail + Geo-Fenced Mobile</text>
+          <!-- Responses -->
+          <polygon points="80,100 640,100 580,160 140,160" fill="url(#jointGrad1)" opacity="0.82"/>
+          <text x="360" y="135" text-anchor="middle" fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="17" font-weight="600">299 Marketing Responses</text>
+          <!-- Webinar engagement branch -->
+          <rect x="140" y="175" width="440" height="40" fill="#F2F5F9" stroke="#D4DBE4" stroke-width="1"/>
+          <text x="360" y="200" text-anchor="middle" fill="#3B3F47" font-family="Source Sans 3, sans-serif" font-size="13">92 Webinar RSVPs → 55 Lecture Attendees (5-part series)</text>
+          <!-- Patient encounters -->
+          <polygon points="180,225 540,225 480,285 240,285" fill="url(#jointGrad2)" opacity="0.88"/>
+          <text x="360" y="260" text-anchor="middle" fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="16" font-weight="600">10 Patient Encounters</text>
+          <!-- New patients -->
+          <polygon points="240,295 480,295 430,355 290,355" fill="url(#jointGrad2)"/>
+          <text x="360" y="330" text-anchor="middle" fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="15" font-weight="700">6 New Patient Encounters</text>
+          <!-- Revenue line -->
+          <rect x="140" y="370" width="440" height="40" fill="#002E5D"/>
+          <text x="360" y="395" text-anchor="middle" fill="#FFC72C" font-family="Source Sans 3, sans-serif" font-size="14" font-weight="600">Positive Contribution Margin on New Patient Revenue</text>
+        </svg>
+        <p class="funnel-caption">Response-to-encounter tracking ran alongside a 573-referral orthopedic physician network pipeline — giving leadership visibility into both consumer-acquired and referral-driven pipeline at the same time.</p>
+      </div>
+
+      <div class="results">
+        <p class="section-h">Results</p>
+        <div class="results-grid">
+          <div class="result-item">
+            <div class="big">573</div>
+            <div class="desc">Orthopedic physician referrals across the four-hospital network over the campaign window — inbound pipeline running in parallel with the consumer acquisition funnel.</div>
+          </div>
+          <div class="result-item">
+            <div class="big">36<span class="unit">K+</span></div>
+            <div class="desc">Hyperlocal households reached through integrated direct mail and geo-fenced mobile advertising — with 3,780 precision-targeted to self-reported joint pain sufferers.</div>
+          </div>
+          <div class="result-item">
+            <div class="big">55</div>
+            <div class="desc">Attendees across a five-part joint replacement webinar series, with a 60% RSVP-to-attendance rate sustained across five consecutive lectures.</div>
+          </div>
+        </div>
+        <p class="note">Closed-loop attribution maintained from marketing response through patient encounter to new patient revenue, delivering positive contribution margin on the campaign while filling four orthopedic service lines simultaneously.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h3>Open to senior healthcare marketing roles across Orange County and the greater Los Angeles market — <em>let's talk</em>.</h3>
+    <dl class="contact-grid">
+      <div>
+        <dt>Email</dt>
+        <dd><a href="mailto:phoustonnow@gmail.com">phoustonnow@gmail.com</a></dd>
+      </div>
+      <div>
+        <dt>Phone</dt>
+        <dd><a href="tel:+19493550193">(949) 355-0193</a></dd>
+      </div>
+      <div>
+        <dt>LinkedIn</dt>
+        <dd><a href="https://linkedin.com/in/patrickmhouston" target="_blank" rel="noopener noreferrer">/in/patrickmhouston</a></dd>
+      </div>
+      <div>
+        <dt>Location</dt>
+        <dd>Anaheim, California</dd>
+      </div>
+    </dl>
+    <p class="fine">Portfolio selections are representative of work delivered; full campaign details, team composition, and results data available on request.</p>
+  </div>
+</footer>
+
+</body>
+</html>
